@@ -1,38 +1,282 @@
-.App {
-  text-align: center;
+html {
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#root {
+  height: 100%;
+}
+.main {
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  z-index: 5;
+}
+.wrapper {
+  z-index: 20;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.bg {
+  background-image: url('./img/2.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-origin: content-box;
+  width: 100%;
+  height: 130%;
+  top: -15%;
+  position: absolute;
+  z-index: 5;
+}
+.header-container {
+  max-width: 92%;
+  position: relative;
+  top: 2rem;
+  z-index: 100;
+}
+.navbar-container-navbar {
+  z-index: 100;
+}
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 1rem;
+  color: black!important;
+  align-self: center;
+}
+.ss {
+  color: black!important;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  margin-right: 1rem;
+  color: #C19D60!important;
+  align-self: center;
+}
+.dropdown {
+  align-self: center;
+}
+.dropdown-item {
+  color: black!important;
+  font-weight: bold!important;
+  font-size: 0.9rem;
+}
+.dropdown-item:hover {
+  color: #C19D60!important;
+}
+.navbar-item-icon {
+  font-size: 1.6rem;
+}
+.ss:hover {
+  color: #C19D60!important;
+}
+/*.nav-link-res {*/
+/*  transition: all 0.2s ease-in-out 0s;*/
+/*}*/
+/*.nav-link-res::before {*/
+/*  background: white;*/
+/*}*/
+/*.nav-link-res::after {*/
+/*  background: #C19D60;*/
+/*}*/
+/*.nav-link-res:hover {*/
+/*  background: #C19D60!important;*/
+/*  text-decoration: none;*/
+/*}*/
+.nav-link-res__title {
+  z-index: 3!important;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.9rem;
+  cursor: pointer;
+}
+.res-1{
+  width: 8rem;
+  height: 100%;
+  position: relative;
+  background: white;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  z-index: 2;
+  text-decoration: none;
+}
+.res-1:after{
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 100%;
+  height: 0;
+  background: #C19D60;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 2;
+}
+.res-1:hover:after{
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.nav-icon-container {
+  height: 3.5rem;
+}
+/*@media (max-width: 1200px) {*/
+/*  .navbar-nav {*/
+/*    display: flex!important;*/
+/*    flex-direction: row!important;*/
+/*    justify-content: center!important;*/
+/*  }*/
+/*}*/
+.dropdown-menu {
+  background: #292929!important;
+  min-width: 15rem!important;
+  animation: flipTop 0.3s ease-in-out;
+}
+.gg1 {
+  transition: left 0.5s ease-in-out 0s;
+}
+.gg2 {
+  animation: flip 0.5s ease-in-out 0s;
+}
+.dropdown-item {
+  color: white!important;
+}
+.dropdown-item:focus {
+  background: #292929!important;
+}
+.dropdown-item:hover {
+  background: #292929!important;
+}
+.navbar-toggler-icon-main {
+  display: none;
+}
+.navbar {
+  justify-content: space-between!important;
+  background-color: #f8f9fa!important;
+}
+@media (max-width: 1145px) {
+  .navbar-main-nav {
+    display: none!important;
+  }
+  .navbar-toggler-icon-main {
+    display: block;
+  }
+  .navbar {
+    justify-content: flex-end!important;
+  }
+  .navbar-brand {
+    flex: 1;
+    margin: 0!important;
+  }
+  .navbar-item-icon {
+    font-size: 1.2rem;
+  }
+  .ss {
+    padding-right: 1rem!important;
+  }
+  .dropdown-menu {
+    animation: flip 0.5s ease-in-out;
+    background: #292929!important;
+    min-width: 10.28rem!important;
+    top: 120%!important;
+    margin: 0!important;
   }
 }
+.dropdown-toggle::after {
+  color: black;
+}
+@media (max-width: 560px) {
+  .header-container {
+    margin: 0!important;
+    padding: 0!important;
+    top: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  .navbar-brand {
+    margin: 0!important;
+    min-width: 100%;
+    text-align: center;
+  }
+  .navbar {
+    justify-content: center!important;
+  }
+  .dropdown-menu {
+    animation: flip 0.5s ease-in-out;
+    background: #292929!important;
+    min-width: 10rem!important;
+    width: 60vw;
+    top: 120%!important;
+    margin: 0!important;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+@keyframes flip {
+  0% {left: 30%; opacity: 0}
+  100% {left: 0; opacity: 1}
+}
+@keyframes flipTop {
+  0% {top: 150%; opacity: 0}
+  100% {top: 100%; opacity: 1}
 }
 
-.App-link {
-  color: #61dafb;
+.title-container {
+  top: 300px;
+  max-width: 92%;
+  z-index: 100;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mask1 {
+  background-image: url("./img/brush-dec.png");
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  height: 40px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box;
+}
+.hidden-section {
+  padding: 140px 0;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+.main-iamge {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  box-shadow: 0 9px 16px rgba(58, 87, 135, 0.35);
+}
+.images-collage-item {
+  width: 65%;
+  top: -15%;
+  z-index: 2;
+  left: 68%;
+  opacity: 1;
+  overflow: hidden;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+.image-collge-wrap {
+  position: relative;
+  width: 100%;
+  float: left;
 }
